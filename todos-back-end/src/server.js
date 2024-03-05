@@ -1,5 +1,4 @@
 const express = require('express');
-const { darkMode } = require('tailwindcss/stubs/defaultConfig.stub');
 const uuid = require('uuid');
 
 let fakeTodos = [{
@@ -30,13 +29,13 @@ app.post('/todos', (req, res) => {
     res.json(newTodo);
 });
 
-app.delete('./todos/:todoId', (req, res) => {
+app.delete('/todos/:todoId', (req, res) => {
     const todoId = req.params.todoId;
     fakeTodos = fakeTodos.filter(todo => todo.id !== todoId);
     res.json(fakeTodos);
 })
 
-app.put('./todos/:todoId', (req, res) => {
+app.put('/todos/:todoId', (req, res) => {
     const todoId = req.params.todoId;
     fakeTodos.find(todo => todo.id === todoId).isCompleted = true;
     res.json(fakeTodos);
