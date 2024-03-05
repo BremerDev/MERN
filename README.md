@@ -67,3 +67,7 @@ brew services stop mongodb-community@7.0
 brew services list (check if DB has started)
 mongosh is new shell commands (not mongo)
 
+...
+installed nodemon --save-dev
+added "dev" to json package for nodemon
+
