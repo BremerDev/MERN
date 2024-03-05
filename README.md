@@ -47,3 +47,4 @@ npm install exios
 
 then import to app.js which eases burden of sending requests and responses to and from server.
 
+Add proxy to package.json to localhost:8080 to avoid console errors.
