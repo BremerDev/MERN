@@ -53,3 +53,17 @@ Install UUID package:
 npm install uuid
 
 this is used for generating random id's with very low collision probability.
+
+MongoDB:
+brew tap mongodb/brew
+brew update
+brew install mongodb-community@7.0
+
+Start/Stop:
+brew services start mongodb-community@7.0
+
+brew services stop mongodb-community@7.0
+
+brew services list (check if DB has started)
+mongosh is new shell commands (not mongo)
+
