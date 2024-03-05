@@ -16,16 +16,20 @@ function App() {
     loadTodos();
   }, []);
 
-  const createTodo = todoText => {
-    // ...
+  const createTodo = async todoText => {
+    const response = await axios.post('./todos', { newTodoText: todoText });
+    const newTodo = response.data;
+    setTodos(todos.concat(newTodo));
   }
 
-  const completeTodo = todoId => {
-    // ...
+  const completeTodo = async todoId => {
+    const response = await axios.put(`/todos/${todoId}`);
+    setTodos(response.data);
   }
 
-  const deleteTodo = todoId => {
-    // ...
+  const deleteTodo = async todoId => {
+    const response = await axios.delete(`/todos/${todoId}`);
+    setTodos(response.data);
   }
 
   return (
