@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { NewToDoForm } from './NewToDoForm';
 import { ToDoList } from './ToDoList';
 import './App.css';
@@ -8,7 +9,8 @@ function App() {
 
   useEffect(() => {
     const loadTodos = async () => {
-      // ...
+      const response = await axios.get('/todos');
+      setTodos(response.data);
     }
 
     loadTodos();

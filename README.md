@@ -15,9 +15,35 @@ Allows Developers to know just JavaScript. Everything is written in JavaScript i
 Setup Front End for React:
  npx create-react-app todos-front-end --use-npm
 
-To Start Server:
+To Start:
 npm run start
 
+Delete App.js boilerplates and delete logo.svg.
 
+Setup Back End:
+Create Separate Directory for Backend.
 
- 
+npm init -y 
+
+creates josn file
+
+Install Backend Dependancies:
+npm install express mongodb
+
+Setup Server:
+mkdir src -> server.js
+setup endpoints (CRUD) here.
+
+Start Server:
+node server.js
+
+See Backend get at http://localhost:8080/test for to test.
+
+Start Creating Components... Build the app!
+
+Install axios dependancies:
+
+npm install exios
+
+then import to app.js which eases burden of sending requests and responses to and from server.
+

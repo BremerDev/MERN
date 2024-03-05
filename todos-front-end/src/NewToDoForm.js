@@ -13,7 +13,7 @@ export const NewToDoForm = ({ onClickCreate }) => {
                 <button onClick={() => {
                     onClickCreate(inputValue);
                     setInputValue('');
-                }}></button>
+                }}>Create!</button>
         </div>
     )
 }
